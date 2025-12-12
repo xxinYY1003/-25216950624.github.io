@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易云音乐 - 在线播放器</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 播放器主体容器 -->
+    <div class="player-container">
+        <!-- 顶部导航 -->
+        <header class="player-header">
+            <div class="logo">
+                <i class="fa fa-music"></i>
+                <span>小依音乐播放器</span>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="搜索歌曲、歌手">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+        </header>
+
+        <!-- 播放器主体 -->
+        <main class="player-main">
+            <!-- 左侧封面区域 -->
+            <div class="cover-section">
+                <div class="cover-wrapper">
+                    <img src="assets/images/record1.jpg" alt="歌曲封面" class="music-cover">
+                    <div class="cover-mask"></div>
+                </div>
+                <div class="music-info">
+                    <h2 class="music-title">晴天</h2>
+                    <p class="music-singer">周杰伦</p>
+                </div>
+            </div>
+
+            <!-- 右侧控制区域 -->
+            <div class="control-section">
+                <!-- 进度条控制 -->
+                <div class="progress-control">
+                    <span class="current-time">00:00</span>
+                    <div class="progress-bar">
+                        <div class="progress-track"></div>
+                        <div class="progress-thumb"></div>
+                    </div>
+                    <span class="total-time">04:29</span>
+                </div>
+
+                <!-- 播放控制按钮 -->
+                <div class="play-controls">
+                    <button class="control-btn prev-btn">
+                        <i class="fa fa-step-backward"></i>
+                    </button>
+                    <button class="control-btn play-btn">
+                        <i class="fa fa-play"></i>
+                    </button>
+                    <button class="control-btn next-btn">
+                        <i class="fa fa-step-forward"></i>
+                    </button>
+                </div>
+
+                <!-- 音量控制 -->
+                <div class="volume-control">
+                    <i class="fa fa-volume-up"></i>
+                    <div class="volume-bar">
+                        <div class="volume-track"></div>
+                        <div class="volume-thumb"></div>
+                    </div>
+                </div>
+
+                <!-- 播放列表 -->
+                <div class="playlist-section">
+                    <h3><i class="fa fa-list"></i> 播放列表</h3>
+                    <ul class="playlist">
+                        <li class="active" data-src="assets/music/music1.mp3" data-cover="assets/images/bg0.png" data-title="晴天" data-singer="周杰伦">
+                            晴天 - 周杰伦
+                        </li>
+                        <li data-src="assets/music/music2.mp3" data-cover="assets/images/bg3.png" data-title="稻香" data-singer="周杰伦">
+                            稻香 - 周杰伦
+                        </li>
+                        <li data-src="assets/music/music3.mp3" data-cover="assets/images/bg2.png" data-title="安和桥" data-singer="宋冬野">
+                            安和桥 - 宋冬野
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <!-- 音频元素 -->
+        <audio id="audio-player" preload="metadata"></audio>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
